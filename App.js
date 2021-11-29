@@ -15,6 +15,7 @@ import Tab from "./src/navigation/Tab";
 export default function Appr() {
   const [fonts] = Font.useFonts(FontAwesome5.font);
   const [assets] = useAssets([require("./asset/test.png")]);
+
   if (!fonts || !assets) {
     return <AppLoading />;
   } else {

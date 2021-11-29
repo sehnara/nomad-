@@ -6,4 +6,4 @@ const Movies = () =>{
         <Text>Movies</Text>
     </View>
 }
-export default Movies;
+export default Movies
