@@ -8,12 +8,18 @@
 
 ### 2) font :
 
-#### 1) 설치 : expo install expo-font
+#### 1> 설치 : expo install expo-font
 
 ### 3) Image(GLOBAL), Asset(LOCAL) :
 
-#### 1) 설치 : expo install expo-asset
+#### 1> 설치 : expo install expo-asset
 
-#### 2) Asset.loadAsync(require(""))
+#### 2> Asset.loadAsync(require(""))
 
-#### 3) Image.prefetch(URL)
+#### 3> Image.prefetch(URL)
+
+### 4) HOOKS
+
+#### 1> const [font] = FONT.useFonts()
+
+#### 2> const [asset] = useAssets([])
