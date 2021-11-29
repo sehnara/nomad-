@@ -17,7 +17,8 @@ const ScreenThree = ({navigation:{goBack}}) =>{
 
 const Stack = () =>{
     return <Stacks.Navigator 
-        screenOptions={{headerBackTitleVisible : false}}
+        screenOptions={{headerBackTitleVisible : false, presentation : "modal"}}
+        
     >
         <Stacks.Screen name={"One"} component={ScreenOne}/>
         <Stacks.Screen name={"Two"} component={ScreenTwo}/>

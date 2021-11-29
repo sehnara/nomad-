@@ -17,6 +17,7 @@ import {
 } from "@react-navigation/native";
 import Tab from "./src/navigation/Tab";
 import Stack from "./src/navigation/Stack";
+import Root from "./src/navigation/Root";
 
 export default function Appr() {
   const [fonts] = Font.useFonts(FontAwesome5.font);
@@ -27,8 +28,7 @@ export default function Appr() {
   } else {
     return (
       <NavigationContainer>
-        {/* <Tab /> */}
-        <Stack />
+        <Root />
       </NavigationContainer>
     );
   }
