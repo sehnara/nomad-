@@ -14,17 +14,17 @@ const Tab = () => {
     return (
         <Tabs.Navigator 
             initialRouteName= {"Tv"}
-            // screenOptions={{
-            //     tabBarActiveTintColor : isDark ? "#ffc130":"#8425f8",
-            //     tabBarInactiveTintColor : isDark ?"#9e9e9e" : "#9e9e9e",
-            //     headerTintColor: isDark ? "#ffc130":"#8425f8",
-            //     headerStyle: {
-            //         backgroundColor: isDark ? "#292929":"#ffffff",
-            //       },
-            //     tabBarStyle :{
-            //         backgroundColor: isDark ? "#292929":"#ffffff",
-            //     }
-            // }} 
+            screenOptions={{
+                tabBarActiveTintColor : isDark ? "#ffc130":"#8425f8",
+                tabBarInactiveTintColor : isDark ?"#9e9e9e" : "#9e9e9e",
+                headerTintColor: isDark ? "#ffc130":"#8425f8",
+                headerStyle: {
+                    backgroundColor: isDark ? "#292929":"#ffffff",
+                  },
+                tabBarStyle :{
+                    backgroundColor: isDark ? "#292929":"#ffffff",
+                }
+            }} 
         >
             <Tabs.Screen 
                 name="Movies" 

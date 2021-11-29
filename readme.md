@@ -37,3 +37,10 @@
 ### 1) flow
 
 (1) npm install @react-navigation/bottom-tabs - (2) navigator, screen 구성 - (3) App.tsx에서 NavigationContainer 깔아주고 그 안에 기존의 tab nav 넣어줌
+
+## 2. Stack Navigation
+
+[참고] React-navigation > https://reactnavigation.org/docs/native-stack-navigator
+
+- stack navigator이 옵션은 더 많다.
+- flow는 동일, 그러나 navigation props를 확인할 것!
