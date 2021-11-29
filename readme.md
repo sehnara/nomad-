@@ -1,3 +1,5 @@
+# [INTRO]
+
 ## 1. 설치
 
 #### npx create-react-native-app
@@ -23,3 +25,15 @@
 #### 1> const [font] = FONT.useFonts()
 
 #### 2> const [asset] = useAssets([])
+
+<hr/>
+
+# [NAVIGATION]
+
+## 1. Tab Navigation
+
+[참고] React-navigation > https://reactnavigation.org/docs/bottom-tab-navigator/
+
+### 1) flow
+
+(1) npm install @react-navigation/bottom-tabs - (2) navigator, screen 구성 - (3) App.tsx에서 NavigationContainer 깔아주고 그 안에 기존의 tab nav 넣어줌

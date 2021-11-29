@@ -8,6 +8,10 @@ import { FontAwesome5 } from "@expo/vector-icons";
 // 2. ASSET
 import { Asset, useAssets } from "expo-asset";
 
+// 3. navigationContainer
+import { NavigationContainer } from "@react-navigation/native";
+import Tab from "./src/navigation/Tab";
+
 export default function Appr() {
   const [fonts] = Font.useFonts(FontAwesome5.font);
   const [assets] = useAssets([require("./asset/test.png")]);
@@ -15,9 +19,9 @@ export default function Appr() {
     return <AppLoading />;
   } else {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <NavigationContainer>
+        <Tab />
+      </NavigationContainer>
     );
   }
 }
