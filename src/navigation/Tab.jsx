@@ -10,7 +10,6 @@ const Tabs = createBottomTabNavigator();
 
 const Tab = () => {
     const isDark = useColorScheme() == "dark"
-    console.log(isDark)
     return (
         <Tabs.Navigator 
             initialRouteName= {"Tv"}

@@ -63,3 +63,18 @@
 1. style object 생성 : styled.js에서 object만들고 export 해줌
 2. (App.js) <ThemeProvider theme ={}>
 3. App.js 하단 컴포넌트에서 props로 받아옴
+
+# [TypeScript]
+
+[참고] https://reactnative.dev/docs/0.65/typescript#adding-typescript-to-an-existing-project
+
+## 1. 설치
+
+1. yarn add -D typescript @types/jest @types/react @types/react-native @types/react-test-renderer
+2. tsconfig.json 생성하고 참고 파일에서 코드 복붙
+3. 원하는 js파일 -> ts or tsx 파일로 변경 : 이 때 typechecking으로 인해 깨지는 경우 발생
+4. (styled-components) [참고] https://styled-components.com/docs/api#typescript
+   4-1. npm install @types/styled-components @types/styled-components-react-native)
+   4-2. (tsconfig.json)"types": ["jest", "styled-components-react-native"]
+   4-3. declaration 파일에 theme의 property 값의 type을 밝힘
+5. (Navigation) const Movies:React.FC<NativeStackScreenProps<any, 'Movies'>> = ({navigation}) =>{

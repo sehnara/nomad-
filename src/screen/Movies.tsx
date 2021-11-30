@@ -1,23 +1,24 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import styled from "styled-components/native"
 
-const BtnContainer = styled.View`
+const BtnContainer = styled.TouchableOpacity`
     flex :1 ;
     justify-content : center;
     align-items : center;
-    background-color : ${props => props.theme.mainBgColor}
+    background-color : ${props => props.theme.mainBgColor};
 `;
 const BtnText = styled.Text`
     color : ${props => props.theme.textColor};
 `;
 
-const Movies = ({navigation : {navigate}}) =>{
+const Movies:React.FC<NativeStackScreenProps<any, 'Movies'>> = ({navigation}) =>{
     return (
     <BtnContainer 
         style={{flex:1, justifyContent: "center", alignItems:"center"}} 
-        onPress={()=>navigate("Stacks", {screen : "One"})}
+        onPress={()=>navigation.navigate("Stacks", {screen : "One"})}
     >
-        <BtnText color = {'blue'}>Movies</BtnText>
+        <BtnText>Movies</BtnText>
     </BtnContainer>
     )
 }
