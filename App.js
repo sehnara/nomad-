@@ -1,6 +1,6 @@
 import AppLoading from "expo-app-loading";
 import React, { useState } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 // 1. FONT
 import * as Font from "expo-font";
@@ -15,21 +15,28 @@ import {
   DefaultTheme,
   DarkTheme,
 } from "@react-navigation/native";
-import Tab from "./src/navigation/Tab";
-import Stack from "./src/navigation/Stack";
 import Root from "./src/navigation/Root";
 
-export default function Appr() {
+// 4. Themes (styled-components)
+import { darkTheme, lightTheme } from "./src/styled";
+import useColorScheme from "react-native/Libraries/Utilities/useColorScheme";
+import { ThemeProvider } from "styled-components";
+
+export default function App() {
   const [fonts] = Font.useFonts(FontAwesome5.font);
   const [assets] = useAssets([require("./asset/test.png")]);
+
+  const isDark = useColorScheme() == "dark";
 
   if (!fonts || !assets) {
     return <AppLoading />;
   } else {
     return (
-      <NavigationContainer>
-        <Root />
-      </NavigationContainer>
+      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        <NavigationContainer>
+          <Root />
+        </NavigationContainer>
+      </ThemeProvider>
     );
   }
 }

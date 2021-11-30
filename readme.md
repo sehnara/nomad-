@@ -44,3 +44,22 @@
 
 - stack navigator이 옵션은 더 많다.
 - flow는 동일, 그러나 navigation props를 확인할 것!
+
+# [Styled Components]
+
+## 1. 설치
+
+1. npm i styled-components
+2. import styled from "styled-components/native"
+
+## 2. 장점
+
+1. 각 컴포넌트에 특정한 이름을 설정해줄 수 있다.
+2. 'react-native'에서 컴포넌트들을 import 안해도 된다.
+3. props 사용이 가능하다.
+
+## 3. Theme
+
+1. style object 생성 : styled.js에서 object만들고 export 해줌
+2. (App.js) <ThemeProvider theme ={}>
+3. App.js 하단 컴포넌트에서 props로 받아옴
